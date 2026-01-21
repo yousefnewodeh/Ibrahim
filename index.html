@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Ibrahim - FC Barcelona Edition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jumpscare.css">
+    <!-- Premium Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&family=Kalam:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <div class="background-atmosphere" id="bg">
+        <!-- Floating emojis via JS -->
+    </div>
+
+    <div class="book-container">
+        <div class="book" id="book">
+
+            <!-- LEAF 1: Front Cover / Intro -->
+            <div class="page" id="p1">
+                <div class="front cover-front">
+                    <div class="cover-texture"></div>
+                    <div class="cover-content">
+                        <div class="logo-container">
+                            <span class="logo-text">FC BARCELONA</span>
+                        </div>
+                        <h1 class="gold-text">The Legend<br>Ibrahim</h1>
+                        <div class="crest-container">
+                            <!-- CSS Only Crest or Image -->
+                            <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+                                alt="FCB Logo" class="fcb-crest">
+                        </div>
+                        <p class="edition-text">LIMITED BIRTHDAY EDITION</p>
+                        <div class="click-hint">Tap to Open</div>
+                    </div>
+                </div>
+                <div class="back paper-page">
+                    <div class="content">
+                        <h2>Dear Ibrahim,</h2>
+                        <p class="handwritten">Another year older, but let's be honest... you still look like you get
+                            asked for ID at the candy store!</p>
+                        <p class="handwritten">They say "Youth is wasted on the young," but you seem to be using every
+                            ounce of it to drive us crazy with your energy.</p>
+                        <p class="handwritten">Enjoy these glory days before your back starts hurting like ours.</p>
+                        <div class="signature">
+                            <p>- From the Legend you'll never surpass (3mak Yousef)</p>
+                        </div>
+                        <div class="page-num">1</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEAF 2: Scouting Report / Breaking News -->
+            <div class="page" id="p2">
+                <div class="front paper-page">
+                    <div class="content">
+                        <h2 class="section-title">La Masia Scouting Report</h2>
+                        <div class="stats-card">
+                            <div class="stat-row">
+                                <span>SPEED</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 99%"></div>
+                                </div>
+                                <span>99</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>SKILL</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 98%"></div>
+                                </div>
+                                <span>98</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>METABOLISM</span>
+                                <div class="bar">
+                                    <div class="fill" style="width: 100%"></div>
+                                </div>
+                                <span>100</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>DUMBNESS</span>
+                                <div class="bar">
+                                    <div class="fill red" style="width: 110%"></div>
+                                </div>
+                                <span>∞</span>
+                            </div>
+                        </div>
+                        <p class="note">"Scout Note: Unstoppable when he actually passes the ball."</p>
+                        <div class="page-num">2</div>
+                    </div>
+                </div>
+                <div class="back paper-page">
+                    <div class="content">
+                        <h2 class="news-headline">BREAKING NEWS</h2>
+                        <div class="news-clipping">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Camp_Nou_%2814798604724%29.jpg/640px-Camp_Nou_%2814798604724%29.jpg"
+                                class="news-img" alt="Camp Nou">
+                            <h3>IBRAHIM SIGNS FOREVER!</h3>
+                            <p>FC Barcelona confirms that Ibrahim has signed a lifetime contract. The camp nou crowd is
+                                going wild!</p>
+                            <p>Sources say the transfer fee was "One Billion Birthday Cakes".</p>
+                        </div>
+                        <div class="page-num">3</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEAF 3: Quotes / Trophies -->
+            <div class="page" id="p3">
+                <div class="front paper-page">
+                    <div class="content">
+                        <h2 class="section-title">Legends Speak</h2>
+                        <div class="quote-box">
+                            <p class="quote">"Ibrahim taught me how to dribble. He is the true GOAT."</p>
+                            <p class="author">- Leo Messi</p>
+                        </div>
+                        <div class="quote-box">
+                            <p class="quote">"If Ibrahim played, we would win the treble every year."</p>
+                            <p class="author">- Pep Guardiola</p>
+                        </div>
+                        <div class="page-num">4</div>
+                    </div>
+                </div>
+                <div class="back paper-page">
+                    <div class="content">
+                        <h2 class="section-title">Trophy Cabinet</h2>
+                        <div class="trophies-grid">
+                            <div class="trophy">🏆<br><span>Best Bro</span></div>
+                            <div class="trophy">🥇<br><span>FIFA King</span></div>
+                            <div class="trophy">⚽<br><span>Golden Foot</span></div>
+                            <div class="trophy">🌟<br><span>Birthday Boy</span></div>
+                        </div>
+                        <p class="handwritten center">And many more to come!</p>
+                        <div class="page-num">5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEAF 4: Moments / The Contract -->
+            <div class="page" id="p4">
+                <div class="front paper-page">
+                    <div class="content">
+                        <h2 class="section-title">Top Moments</h2>
+                        <ul class="moments-list">
+                            <li>📅 That time you scored a banger in FIFA.</li>
+                            <li>📅 Staying up late watching El Clásico.</li>
+                            <li>📅 Being an absolute legend every day.</li>
+                        </ul>
+                        <div class="illustration">😎</div>
+                        <div class="page-num">6</div>
+                    </div>
+                </div>
+                <div class="back paper-page">
+                    <div class="content">
+                        <h2 class="contract-header">OFFICIAL CONTRACT</h2>
+                        <div class="contract-body">
+                            <p>This document certifies that <strong>Ibrahim</strong> is officially ONE YEAR OLDER.</p>
+                            <p><strong>Terms:</strong></p>
+                            <ul>
+                                <li>Must eat cake today.</li>
+                                <li>No homework allowed.</li>
+                                <li>Full control of the TV remote.</li>
+                            </ul>
+                        </div>
+                        <div class="page-num">7</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEAF 5: Signature / Wishes -->
+            <div class="page" id="p5">
+                <div class="front paper-page">
+                    <div class="content">
+                        <h2 class="section-title">Sign Here</h2>
+                        <p>To accept these terms, please touch the line below:</p>
+                        <div class="signature-line" id="signLine">
+                            <span class="placeholder">Touch to Sign</span>
+                        </div>
+                        <p class="handwritten hidden" id="signedText">Ibrahim (The Legend)</p>
+                        <div class="page-num">8</div>
+                    </div>
+                </div>
+                <div class="back paper-page">
+                    <div class="content">
+                        <h2 class="bday-title">Happy Birthday!</h2>
+                        <p class="wishes">Wishing you a year filled with 90th-minute winners, endless joy, and
+                            everything you dream of.</p>
+                        <p class="handwritten big">Visca el Barça!<br>Visca Ibrahim!</p>
+                        <div class="page-num">9</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEAF 6: Surprise / Back Cover -->
+            <div class="page" id="p6">
+                <div class="front paper-page">
+                    <div class="content center-content">
+                        <h2>One Last Thing...</h2>
+                        <p>Are you ready?</p>
+                        <button class="celebrate-btn" id="celebrateBtn">OPEN GIFT 🎁</button>
+                        <div class="page-num">10</div>
+                    </div>
+                </div>
+                <div class="back cover-back">
+                    <div class="cover-texture"></div>
+                    <div class="cover-content">
+                        <h3>Created with ❤️<br>for Ibrahim</h3>
+                        <div class="fcb-crest" style="width: 80px; margin: 20px 0; opacity: 0.8;">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#cfaa48" stroke-width="2" />
+                                <text x="50" y="55" text-anchor="middle" fill="#cfaa48" font-size="12"
+                                    font-family="serif">EST 2024</text>
+                            </svg>
+                        </div>
+                        <p class="edition-text">LIMITED EDITION</p>
+                        <p class="isbn" style="margin-top: auto; font-family: monospace;">ISBN: GOAT-10-10-MESSI</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JUMPSCARE OVERLAY -->
+    <div id="jumpscare" class="hidden">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/A_male_zombie.jpg/800px-A_male_zombie.jpg"
+            alt="Scary Face">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
