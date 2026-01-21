@@ -371,3 +371,208 @@ body {
 .flipped {
     transform: rotateY(-180deg);
 }
+
+/* MOBILE RESPONSIVE - HORIZONTAL SCROLL CARDS */
+@media (max-width: 768px) {
+    body {
+        perspective: none;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .background-atmosphere {
+        display: none;
+        /* Hide floating emojis on mobile */
+    }
+
+    .book-container {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        animation: none;
+    }
+
+    .book {
+        transform-style: flat;
+        box-shadow: none;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Flatten pages so fronts and backs become direct flex children */
+    .page {
+        display: contents;
+    }
+
+    /* Each front and back becomes a full-screen card */
+    .front,
+    .back {
+        min-width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        position: relative;
+        scroll-snap-align: center;
+        transform: none !important;
+        backface-visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow-y: auto;
+    }
+
+    /* Adjust cover content for mobile */
+    .cover-content {
+        padding: 40px 20px;
+        margin: 10px;
+        height: auto;
+    }
+
+    .gold-text {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .fcb-crest {
+        width: 120px;
+    }
+
+    .logo-text,
+    .edition-text {
+        font-size: 0.9rem;
+    }
+
+    .click-hint {
+        font-size: 0.9rem;
+    }
+
+    /* Content adjustments */
+    .content {
+        padding: 40px 25px;
+        overflow-y: auto;
+    }
+
+    .handwritten {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    /* Stats card */
+    .stats-card {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .stat-row {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .stat-row span:first-child {
+        width: 100px;
+    }
+
+    /* News */
+    .news-clipping {
+        padding: 12px;
+        margin: 10px 0;
+    }
+
+    .news-headline {
+        font-size: 1.8rem;
+    }
+
+    .news-img {
+        height: 100px;
+    }
+
+    /* Trophies */
+    .trophies-grid {
+        gap: 15px;
+        margin: 15px 0;
+    }
+
+    .trophy {
+        font-size: 2rem;
+        padding: 12px;
+    }
+
+    /* Quotes */
+    .quote-box {
+        margin: 15px 0;
+    }
+
+    /* Moments */
+    .moments-list {
+        font-size: 1.1rem;
+        line-height: 2;
+    }
+
+    /* Contract */
+    .contract-header {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .contract-body {
+        font-size: 1rem;
+    }
+
+    /* Birthday wishes */
+    .bday-title {
+        font-size: 2rem;
+    }
+
+    .wishes {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    /* Button */
+    .celebrate-btn {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        margin: 20px auto;
+    }
+
+    /* Signature */
+    .signature-line {
+        margin: 20px 0;
+        font-size: 1rem;
+    }
+
+    #signedText {
+        font-size: 1.8rem;
+    }
+
+    /* Center content helper */
+    .center-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .gold-text {
+        font-size: 2rem;
+    }
+
+    .handwritten {
+        font-size: 1.1rem;
+    }
+
+    .fcb-crest {
+        width: 100px;
+    }
+}
