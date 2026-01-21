@@ -1,9 +1,6 @@
 
 // DOM Elements
 const pages = document.querySelectorAll('.page');
-const celebrateBtn = document.getElementById('celebrateBtn');
-const signLine = document.getElementById('signLine');
-const signedText = document.getElementById('signedText');
 const floatingContainer = document.getElementById('bg');
 
 // State
@@ -51,30 +48,41 @@ pages.forEach((page, index) => {
 // Re-select fresh nodes
 const freshPages = document.querySelectorAll('.page');
 
+// Detect if mobile
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
 freshPages.forEach((page, index) => {
     page.style.zIndex = totalPages - index;
 
-    page.addEventListener('click', function () {
-        if (this.classList.contains('flipped')) {
-            // Closing (Left -> Right)
-            this.classList.remove('flipped');
+    // Only add flip logic on desktop
+    if (!isMobile) {
+        page.addEventListener('click', function () {
+            if (this.classList.contains('flipped')) {
+                // Closing (Left -> Right)
+                this.classList.remove('flipped');
 
-            // Logic: When going back, z-index needs to be high again for it to be on top of right stack?
-            // Actually, CSS 3D handles a lot, but z-index ensures correct layering.
-            setTimeout(() => {
-                this.style.zIndex = totalPages - index;
-            }, 500); // Delay to let it cross the spine
+                // Logic: When going back, z-index needs to be high again for it to be on top of right stack?
+                // Actually, CSS 3D handles a lot, but z-index ensures correct layering.
+                setTimeout(() => {
+                    this.style.zIndex = totalPages - index;
+                }, 500); // Delay to let it cross the spine
 
-        } else {
-            // Opening (Right -> Left)
-            this.classList.add('flipped');
+            } else {
+                // Opening (Right -> Left)
+                this.classList.add('flipped');
 
-            // Logic: It becomes the top of the left stack.
-            // Page 1 is bottom of left stack, Page 2 is on top of it.
-            this.style.zIndex = index + 1;
-        }
-    });
+                // Logic: It becomes the top of the left stack.
+                // Page 1 is bottom of left stack, Page 2 is on top of it.
+                this.style.zIndex = index + 1;
+            }
+        });
+    }
 });
+
+// Re-select interactive elements AFTER cloning
+const celebrateBtn = document.getElementById('celebrateBtn');
+const signLine = document.getElementById('signLine');
+const signedText = document.getElementById('signedText');
 
 // Floating Atmosphere (Matches "Mother" vibe)
 const emojis = ['⚽', '🏆', '⭐', '🔴', '🔵', '🥇', '🏟️'];
